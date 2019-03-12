@@ -17,6 +17,12 @@ import java.util.logging.Logger;
 public class TestDateController {
     Logger LOGGER = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
     private static final Random RANDOM_GENERATOR = new Random();
+
+    /**
+     * Run test 10 times, since problem is intermittent (hashcode dependent),
+     * it may fail/succeed with a single run.
+     * @throws IOException
+     */
     @Test
     public void test_dateController() throws IOException {
         for(int i = 0; i < 10; i++) {
